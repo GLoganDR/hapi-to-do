@@ -1,0 +1,44 @@
+{
+  "name": "hapi-to-do",
+  "version": "1.0.0",
+  "description": "Task organizer app using Hapi, Mongoose, Lout, and Joi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LizaHCarter/hapi-to-do"
+  },
+  "author": "Liza Carter <lizahcarter@gmail.com>",
+  "contributors": [
+    "Nathan Vasquez <nathan.superartie@gmail.com>",
+    "Adam Barnhard <admbarn@gmail.com>",
+    "Kayla Jones <kaylalyne424@gmail.com>",
+    "Logan Richardson <g.logan.richardson@gmail.com>"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LizaHCarter/hapi-to-do/issues"
+  },
+  "homepage": "https://github.com/LizaHCarter/hapi-to-do",
+  "dependencies": {
+    "good": "^4.0.0",
+    "good-console": "^2.0.1",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-jade": "^0.13.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-less": "^0.12.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-hapi": "^0.8.1",
+    "grunt-jscs": "^0.8.1",
+    "grunt-shell": "^1.1.1",
+    "hapi": "^7.5.2",
+    "joi": "^4.9.0",
+    "jshint-stylish": "^1.0.0",
+    "jshintrc": "^0.1.0",
+    "lout": "^5.1.2",
+    "mongoose": "^3.8.19"
+  }
+}
