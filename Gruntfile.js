@@ -6,8 +6,7 @@ module.exports = function(grunt){
         // ---------------------------------------------------------------------- //
         watch: {
             code: {
-                options: {livereload: true},
-                files: ['Gruntfile.js', 'client/**/*'],
+                files: ['Gruntfile.js', 'client/**/*', 'server/**/*', 'test/**/*'],
                 tasks: ['build']
             }
         },
@@ -26,7 +25,7 @@ module.exports = function(grunt){
         // ---------------------------------------------------------------------- //
         jshint: {
             options: {jshintrc: '.jshintrc', reporter: require('jshint-stylish')},
-            all: ['Gruntfile.js', '!client/assets/js/*.js']
+            all: ['Gruntfile.js', 'client/**/*.js', 'server/**/*.js', 'test/**/*.js']
         },
         // ---------------------------------------------------------------------- //
         jscs: {
@@ -38,11 +37,15 @@ module.exports = function(grunt){
         },
         // ---------------------------------------------------------------------- //
         jade: {
+            options: {
+                pretty: true,
+                doctype: 'html'
+            },
             build: {
                 files: [{
                     cwd: 'client',
                     src: '**/*.jade',
-                    dest: './',
+                    dest: 'public',
                     ext: '.html',
                     expand: true
                 }]
@@ -54,7 +57,7 @@ module.exports = function(grunt){
                 files: [{
                     cwd: 'client',
                     src: '**/*.less',
-                    dest: './',
+                    dest: 'public',
                     ext: '.css',
                     expand: true
                 }]
@@ -62,7 +65,7 @@ module.exports = function(grunt){
         },
         // ---------------------------------------------------------------------- //
         clean: {
-            server: './'
+            server: 'public'
         },
         // ---------------------------------------------------------------------- //
         shell: {
@@ -75,19 +78,19 @@ module.exports = function(grunt){
             js: {
                 cwd: 'client',
                 src: ['**/*.js'],
-                dest: './',
+                dest: 'public',
                 expand: true
             },
             assets: {
                 cwd: 'client/assets',
                 src: ['**/*'],
-                dest: './assets',
+                dest: 'public/assets',
                 expand: true
             },
             favicon: {
                 cwd: 'client',
                 src: ['favicon.ico'],
-                dest: './',
+                dest: 'public',
                 expand: true
             }
         }
